@@ -1,79 +1,69 @@
-.pageTitle {
+.page-title {
   text-align: center;
   margin: 12px 0;
 }
 
-.formContainer {
-  border: 1px solid #dfdfdf;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 0 15px rgba(0, 153, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  margin: 22px auto;
+.login-card {
+  margin: 0 auto;
+  width: 320px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
 }
 
-.formLabel {
-  margin-bottom: 8px;
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
   cursor: pointer;
 }
 
-.formInput {
+.input-group input {
   display: block;
   width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  margin: 8px 0;
+  border-radius: 6px;
   outline: none;
-  padding: 6px 8px;
-  font-size: 14px;
-  margin: 8px 0 0;
-  border: 1px solid #e7e7e7;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, transparent);
 }
 
-.formInput:focus {
-  transition: 100ms all linear;
-  box-shadow: 0 0 15px rgba(0, 153, 255, 0.12);
-  border-color: #dfdfdf;
+.input-group a {
+  float: right;
 }
 
-.checkboxLabel {
-  font-size: 14px;
+.card-link {
+  color: var(--default-blue);
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.chk-remember {
   display: flex;
   align-items: center;
-  margin: 4px 0;
   cursor: pointer;
 }
 
-.checkboxLabel input {
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
+.chk-remember input {
+  margin-right: 6px;
 }
 
-.formButton {
-  margin: 8px 0 16px;
-  font-size: 16px;
+.submit-button {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
   padding: 6px;
   cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid #dfdfdf;
-  background: transparent;
-  transition: all 100ms ease;
+  margin: 16px 0;
 }
 
-.formButton:hover {
-  background: #0099ff;
-  border: 1px solid transparent;
-  color: white;
-}
-
-.signupText {
-  margin-top: 8px;
-  color: #0099ff;
+.login-callout {
+  margin-top: 12px;
   text-align: center;
-}
-
-.signupText:hover {
-  text-decoration: underline;
 }

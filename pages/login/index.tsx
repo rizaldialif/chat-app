@@ -15,38 +15,38 @@ export default function Login() {
         <title>Login Page Chat app</title>
         <meta name="description" content="Login page chat app" />
       </Head>
-      <h1 className={styles.pageTitle}>Login Page</h1>
-      <form method="post" className={styles.formContainer}>
-        <label htmlFor="username" className={styles.formLabel}>
-          Username
+      <h2 className={styles["page-title"]}>Login to chat app</h2>
+      <section className={styles["login-card"]}>
+        <form action="/" method="post">
+          <div className={styles["input-group"]}>
+            <label htmlFor="username">Username</label>
+            <input type="text" name="username" id="username" />
+          </div>
+          <div className={styles["input-group"]}>
+            <label htmlFor="password">Password</label>
+            <Link href="/resetpassword">
+              <a className={styles["card-link"]}>Forgot password?</a>
+            </Link>
+            <input type="password" name="password" id="password" />
+          </div>
+          <label htmlFor="rememberMe" className={styles["chk-remember"]}>
+            <input type="checkbox" name="rememberMe" id="rememberMe" />
+            Remember Me!
+          </label>
           <input
-            type="text"
-            name="username"
-            id="username"
-            className={styles.formInput}
+            type="submit"
+            value="Sign In"
+            className={styles["submit-button"]}
           />
-        </label>
-        <label htmlFor="password" className={styles.formLabel}>
-          Password
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className={styles.formInput}
-          />
-        </label>
-        <label htmlFor="rememberMe" className={styles.checkboxLabel}>
-          <input type="checkbox" name="rememberMe" id="rememberMe" />
-          Remember me
-        </label>
-        <button className={styles.formButton} onClick={handleClick}>
-          Login
-        </button>
-        <div className="divider" />
-        <Link href="/signup">
-          <a className={styles.signupText}>Create an account!</a>
-        </Link>
-      </form>
+          <div className="divider" />
+          <div className={styles["login-callout"]}>
+            Don't have account?{" "}
+            <Link href="/signup">
+              <a className={styles["card-link"]}>Create an account.</a>
+            </Link>
+          </div>
+        </form>
+      </section>
     </>
   );
 }
