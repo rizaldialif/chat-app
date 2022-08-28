@@ -1,0 +1,79 @@
+.pageTitle {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.formContainer {
+  border: 1px solid #dfdfdf;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 22px auto;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.formInput {
+  display: block;
+  width: 100%;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 14px;
+  margin: 8px 0 0;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, transparent);
+}
+
+.formInput:focus {
+  transition: 100ms all linear;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.12);
+  border-color: #dfdfdf;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  width: 15px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.formButton {
+  margin: 8px 0 16px;
+  font-size: 16px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #dfdfdf;
+  background: transparent;
+  transition: all 100ms ease;
+}
+
+.formButton:hover {
+  background: #0099ff;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.signupText {
+  margin-top: 8px;
+  color: #0099ff;
+  text-align: center;
+}
+
+.signupText:hover {
+  text-decoration: underline;
+}
