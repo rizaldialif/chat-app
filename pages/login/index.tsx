@@ -5,10 +5,6 @@ import styles from "./Login.module.css";
 
 export default function Login() {
   const router = useRouter();
-  const handleClick = (e) => {
-    router.push("https://www.instagram.com");
-    e.preventDefault();
-  };
   return (
     <>
       <Head>
@@ -17,7 +13,7 @@ export default function Login() {
       </Head>
       <h2 className={styles["page-title"]}>Login to chat app</h2>
       <section className={styles["login-card"]}>
-        <form action="/" method="post">
+        <form>
           <div className={styles["input-group"]}>
             <label htmlFor="username">Username</label>
             <input type="text" name="username" id="username" />
@@ -39,7 +35,7 @@ export default function Login() {
             className={styles["submit-button"]}
           />
           <div className="divider" />
-          <div className={styles["login-callout"]}>
+          <div className={styles["callout"]}>
             Don't have account?{" "}
             <Link href="/signup">
               <a className={styles["card-link"]}>Create an account.</a>
