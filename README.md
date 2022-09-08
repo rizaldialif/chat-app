@@ -4,7 +4,7 @@ This is a project after work, based on NextJS
 
 First, clone this repo:
 
-```bash
+```
 git clone https://github.com/rizaldialif/chat-app
 ```
 
@@ -14,4 +14,10 @@ Then install dependencies:
 npm install
 ```
 
-Happy Hacking!
+After that, run the development server:
+
+```
+npm run dev
+```
+
+Done, Happy Hacking!
