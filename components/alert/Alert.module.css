@@ -1,0 +1,7 @@
+.alert {
+  color: var(--default-white);
+  background: var(--alert-color);
+  border-radius: var(--def-border-radius);
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}

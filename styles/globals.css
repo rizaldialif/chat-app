@@ -3,6 +3,9 @@
 :root {
   --default-blue: #0099ff;
   --border-color: #dfdfdf;
+  --alert-color: #c83b50;
+  --default-white: #ffffff;
+  --def-border-radius: 6px;
 }
 
 html,
