@@ -8,10 +8,10 @@ First, clone this repo:
 git clone https://github.com/rizaldialif/chat-app
 ```
 
-then install dependencies:
+Then install dependencies:
 
 ```
 npm install
 ```
 
-## Happy Hacking!
+Happy Hacking!
