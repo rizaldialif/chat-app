@@ -1,0 +1,7 @@
+.alert-error {
+  background: var(--alert-color);
+  color: var(--border-color);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}

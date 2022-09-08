@@ -4,18 +4,23 @@ import bcrypt from "bcrypt";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const password = bcrypt.hashSync(req.body.password, 14);
-  const query1 = `INSERT INTO users (firstname, lastname, email, phonenumber) values ('${req.body.firstname}','${req.body.lastname}', '${req.body.email}', '${req.body.phoneNumber}')`,
-    query2 = `INSERT INTO auth (username, password) values ('${req.body.username}','${password}')`;
+  const query = `INSERT INTO auth (email,username, password) values ('${req.body.email}','${req.body.username}','${password}')`;
   if (req.method == "POST") {
-    connection.connect();
-    connection.query(query1, function (error) {
-      if (error) throw error;
-    });
-    connection.query(query2, function (error) {
-      if (error) throw error;
-    });
-    connection.end();
+    connection.query(
+      `SELECT * FROM auth WHERE username = '${req.body.username}' OR email = '${req.body.email}'`,
+      function (error, result) {
+        if (error) throw error;
+        if (!result.length) {
+          connection.query(query, function (error) {
+            if (error) throw error;
+            res.redirect("/login");
+          });
+        } else {
+          res.send({ result });
+        }
+      }
+    );
   } else {
-    res.status(404).json({ message: "Page Not Found" });
+    res.status(404).json({ message: "Only POST requests" });
   }
 }

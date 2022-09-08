@@ -3,6 +3,7 @@
 :root {
   --default-blue: #0099ff;
   --border-color: #dfdfdf;
+  --alert-color: #ff3737;
 }
 
 html,

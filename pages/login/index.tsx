@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import styles from "./Login.module.css";
 
 export default function Login() {
-  const router = useRouter();
   return (
     <>
       <Head>
@@ -15,7 +14,7 @@ export default function Login() {
       <section className={styles["login-card"]}>
         <form>
           <div className={styles["input-group"]}>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Username or Email</label>
             <input type="text" name="username" id="username" />
           </div>
           <div className={styles["input-group"]}>
